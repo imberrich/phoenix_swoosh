@@ -6,7 +6,7 @@ defmodule PhoenixSwoosh.Mixfile do
   def project do
     [app: :phoenix_swoosh,
      version: @version,
-     elixir: "~> 1.2",
+     elixir: "~> 1.5",
      compilers: compilers(Mix.env),
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -31,10 +31,10 @@ defmodule PhoenixSwoosh.Mixfile do
   end
 
   defp deps do
-    [{:swoosh, "~> 0.1"},
-     {:phoenix, "~> 1.3-rc"},
+    [{:swoosh, "~> 0.9"},
+     {:phoenix, "~> 1.3"},
      {:phoenix_html, "~> 2.2"},
-     {:credo, "~> 0.6", only: [:dev, :test]},
+     {:credo, "~> 0.8", only: [:dev, :test]},
      {:ex_doc, "~> 0.14", only: :docs},
      {:inch_ex, ">= 0.0.0", only: :docs}]
   end
